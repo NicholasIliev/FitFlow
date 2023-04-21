@@ -4,7 +4,9 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    // width: "100%",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   userName: {
     fontFamily: FONT.regular,
@@ -17,18 +19,24 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     marginTop: 20,
   },
-  templates: {
+  programsTitle: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
-    marginTop: 80,
+    marginTop: "22%",
+  },
+  myPrograms: {
+    fontFamily: FONT.regular,
+    fontSize: SIZES.medium,
+    color: COLORS.primary,
+    marginTop: "5%",
   },
   searchContainer: {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
     marginTop: SIZES.large,
-    height: 50,
+    height: "15%",
   },
   searchWrapper: {
     flex: 1,
@@ -65,8 +73,35 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: "20%",
   },
+  addProgramBtnSmall: {
+    width: "20%",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "47.5%",
+    marginTop: "22%",
+    backgroundColor: COLORS.fadedTertiary,
+    borderRadius: SIZES.medium,
+  },
+  addProgrammeBtnLarge: {
+    width: "47.5%",
+    height: "75%",
+    backgroundColor: COLORS.lightWhite,
+    borderRadius: SIZES.medium,
+    borderWidth: "1px",
+    borderColor: COLORS.gray,
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    textAlignVertical: "center",
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: '10%',
+  },
+  
   tabsContainer: {
     width: "100%",
     marginTop: SIZES.medium,
