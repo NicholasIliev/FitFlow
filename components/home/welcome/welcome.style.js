@@ -13,9 +13,15 @@ const styles = StyleSheet.create({
   },
   welcomeMessage: {
     fontFamily: FONT.bold,
+    fontSize: SIZES.xxxLarge,
+    color: COLORS.primary,
+    marginTop: 20,
+  },
+  templates: {
+    fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
-    marginTop: 2,
+    marginTop: 80,
   },
   searchContainer: {
     justifyContent: "center",
@@ -51,6 +57,15 @@ const styles = StyleSheet.create({
     width: "50%",
     height: "50%",
     tintColor: COLORS.white,
+  },
+  startBtn: {
+    width: "100%",
+    height: "85%",
+    backgroundColor: COLORS.tertiary,
+    borderRadius: SIZES.medium,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 40,
   },
   tabsContainer: {
     width: "100%",
