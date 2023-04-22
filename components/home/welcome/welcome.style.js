@@ -4,7 +4,7 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    // width: "100%",
+    width: "100%",
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -107,6 +107,8 @@ const styles = StyleSheet.create({
     marginTop: SIZES.medium,
   },
   tab: (activeJobType, item) => ({
+    width: "70%",
+    height: "200%",
     paddingVertical: SIZES.small / 2,
     paddingHorizontal: SIZES.small,
     borderRadius: SIZES.medium,

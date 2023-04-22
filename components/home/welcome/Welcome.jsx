@@ -1,12 +1,13 @@
-import { userState } from 'react'
-import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
-import { useRouter } from 'expo-router'
-
-import styles from './welcome.style'
-import { icons, SIZE } from '../../../constants'
+import React from 'react';
+import { useState } from "react";
+import { useNavigation } from '@react-navigation/native';
+import styles from './welcome.style';
+import { userState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native';
+import { useRouter } from 'expo-router';
+import { icons, SIZES } from "../../../constants";
 
 const Welcome = () => {
-  const router = new useRouter();
   return (
     <View>
       <View style={styles.container}>
@@ -30,25 +31,16 @@ const Welcome = () => {
         <Text style={styles.myPrograms}>My Programs (0)</Text>
       </View>
 
-
-      {/* <View style={styles.searchContainer}>
-        <TouchableOpacity style={styles.addProgrammeBtnLarge} onPress={() => {}}>
-          <Text style={styles.userName}>Tap to Add New Program</Text>
-        </TouchableOpacity>
-      </View> */}
-
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.addProgrammeBtnLarge} onPress={() => {}}>
-          <Text style={styles.userName}>A Button</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.addProgrammeBtnLarge} onPress={() => {}}>
-          <Text style={styles.userName}>Another Button</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.addProgrammeBtnLarge} onPress={() => {}}>
+            <Text style={styles.userName}>A Button</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.addProgrammeBtnLarge} onPress={() => {}}>
+            <Text style={styles.userName}>Another Button</Text>
+          </TouchableOpacity>
       </View>
-
-
     </View>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;
