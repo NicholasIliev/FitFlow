@@ -1,10 +1,18 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, PixelRatio } from "react-native";
 
 import { COLORS, FONT, SIZES } from "../../../constants";
 
+pixelRatio = PixelRatio.get()
+fontRatio = PixelRatio.getFontScale()
+
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  containerMyPrograms: {
+    width: '110%',
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -85,8 +93,8 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
   },
   addProgrammeBtnLarge: {
-    width: "47.5%",
-    height: "75%",
+    width: (50*pixelRatio),
+    height: "100%",
     backgroundColor: COLORS.lightWhite,
     borderRadius: SIZES.medium,
     borderWidth: "1px",
@@ -95,13 +103,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     textAlignVertical: "center",
+    marginRight: (10*pixelRatio),
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: '10%',
   },
-  
+  flatList: {
+    height: "80%",
+    paddingBottom: (6*pixelRatio),
+  },
   tabsContainer: {
     width: "100%",
     marginTop: SIZES.medium,
