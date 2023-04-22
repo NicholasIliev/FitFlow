@@ -1,15 +1,37 @@
-import { StyleSheet, PixelRatio } from "react-native";
+import { StyleSheet, PixelRatio, Dimensions } from "react-native";
 
 import { COLORS, FONT, SIZES } from "../../../constants";
 
 pixelRatio = PixelRatio.get()
 fontRatio = PixelRatio.getFontScale()
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+  startBtn: {
+    width: "100%",
+    height: "85%",
+    backgroundColor: COLORS.tertiary,
+    borderRadius: SIZES.medium,
+    justifyContent: "center",
+    alignItems: "center",
+    // marginTop: "20%",
+  },
   container: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  emptySpace: {
+    height: (10*pixelRatio), 
+    width: '100%', 
+    opacity: 0 
+  },
+  searchContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    marginTop: SIZES.large,
+    height: "20%",
   },
   containerMyPrograms: {
     width: '110%',
@@ -31,20 +53,13 @@ const styles = StyleSheet.create({
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
-    marginTop: "22%",
+    marginTop: "15%",
   },
   myPrograms: {
     fontFamily: FONT.regular,
     fontSize: SIZES.medium,
     color: COLORS.primary,
     marginTop: "5%",
-  },
-  searchContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    marginTop: SIZES.large,
-    height: "15%",
   },
   searchWrapper: {
     flex: 1,
@@ -74,21 +89,12 @@ const styles = StyleSheet.create({
     height: "50%",
     tintColor: COLORS.white,
   },
-  startBtn: {
-    width: "100%",
-    height: "85%",
-    backgroundColor: COLORS.tertiary,
-    borderRadius: SIZES.medium,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "20%",
-  },
   addProgramBtnSmall: {
     width: "20%",
     justifyContent: "center",
     alignItems: "center",
     marginLeft: "47.5%",
-    marginTop: "22%",
+    marginTop: "15%",
     backgroundColor: COLORS.fadedTertiary,
     borderRadius: SIZES.medium,
   },
@@ -113,6 +119,12 @@ const styles = StyleSheet.create({
   flatList: {
     height: "80%",
     paddingBottom: (6*pixelRatio),
+  },
+  flatListContentContainer: {
+    paddingRight: (4*pixelRatio),
+  },
+  scrollViewContentContainer: {
+    paddingBottom: (150*pixelRatio),
   },
   tabsContainer: {
     width: "100%",
